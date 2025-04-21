@@ -699,3 +699,71 @@ h1, h2, h3 {
         font-size: 2rem;
     }
 }
+/* Substitua o código atual de fontes por: */
+:root {
+    --font-primary: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400; /* Peso regular como padrão */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Negrito para títulos */
+}
+
+/* Exemplo de uso de pesos diferentes */
+.btn {
+    font-weight: 600;
+}
+
+.card h3 {
+    font-weight: 500;
+}
+/* Importação otimizada */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Sistema de pesos */
+:root {
+    --thin: 300;
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+}
+
+/* Aplicação geral */
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 
+                "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+                sans-serif;
+    font-weight: var(--regular);
+    line-height: 1.6;
+}
+
+/* Hierarquia tipográfica */
+h1 {
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: var(--semi-bold);
+    margin-bottom: 1.5rem;
+}
+
+/* Elementos específicos */
+.card-title {
+    font-weight: var(--medium);
+}
+
+.price {
+    font-weight: var(--bold);
+}
+h1, h2 {
+    font-family: 'Poppins', 'Playfair Display', serif;
+    letter-spacing: -0.03em;
+}
