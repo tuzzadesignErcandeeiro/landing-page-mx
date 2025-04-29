@@ -84,7 +84,7 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 600px;
-    gap: 50px;
+    gap: 60px;
     box-sizing: border-box;
     transition: transform 0.5s ease;
 }
@@ -217,6 +217,7 @@ h2::after {
     right: -40px;
 }
 
+
 @keyframes brilho {
     0% { opacity: 0.3; }
     50% { opacity: 1; }
@@ -235,19 +236,22 @@ h2::after {
     color: white;
     padding: 50px 0 20px;
     margin-top: 80px;
+    
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    
 }
 
 .footer-section h4 {
     color: #8EEAF7;
     margin-bottom: 20px;
     font-size: 1.2em;
+    text-align: center;
 }
 
 .social-icons {
@@ -284,6 +288,7 @@ h2::after {
 .social-icons a:hover {
     background: #8EEAF7;
     transform: translateY(-3px);
+    position: center;
 }
 
 .footer-contato li {
@@ -295,15 +300,19 @@ h2::after {
 
 .footer-links li {
     margin-bottom: 8px;
+    position: center;
 }
 
 .footer-links a {
     color: #ddd;
     text-decoration: none;
+    position: center;
 }
 
 .footer-links a:hover {
     color: #8EEAF7;
+    text-align: center;
+    position: center;
 }
 
 .footer-creditos {
@@ -333,6 +342,8 @@ h2::after {
 
 .social-icons a i {
     transition: transform 0.3s ease;
+    position: center;
+    text-align: center;
 }
 
 .social-icons a:hover i {
@@ -552,6 +563,7 @@ h2::after {
 :root {
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
+    --font-primary: 'Poppins', sans-serif;
     --color-primary: #2A363B;
     --color-accent: #FF6B6B;
 }
@@ -559,11 +571,20 @@ h2::after {
 body {
     font-family: var(--font-body);
     line-height: 1.7;
+    font-weight: 400;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
+}
+
+.btn {
+    font-weight: 600;
+}
+
+.card h3 {
+    font-weight: 500;
 }
 
 /* Seção Facilitador */
@@ -699,28 +720,7 @@ h1, h2, h3 {
         font-size: 2rem;
     }
 }
-/* Substitua o código atual de fontes por: */
-:root {
-    --font-primary: 'Poppins', sans-serif;
-}
 
-body {
-    font-family: var(--font-primary);
-    font-weight: 400; /* Peso regular como padrão */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700; /* Negrito para títulos */
-}
-
-/* Exemplo de uso de pesos diferentes */
-.btn {
-    font-weight: 600;
-}
-
-.card h3 {
-    font-weight: 500;
-}
 /* Importação otimizada */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -740,6 +740,7 @@ body {
                 sans-serif;
     font-weight: var(--regular);
     line-height: 1.6;
+    font-display: swap;
 }
 
 /* Hierarquia tipográfica */
@@ -763,7 +764,282 @@ h2 {
 .price {
     font-weight: var(--bold);
 }
+
 h1, h2 {
     font-family: 'Poppins', 'Playfair Display', serif;
     letter-spacing: -0.03em;
+}
+
+/* ====== SEÇÕES NOVAS ====== */
+
+/* Diferenciais */
+.section-diferenciais {
+    background: #f9f9f9;
+    padding: 80px 20px;
+}
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.diferencial-item {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.diferencial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.diferencial-item i {
+    font-size: 2rem;
+    color: #FF6B6B;
+    margin-bottom: 15px;
+}
+
+/* Resultados Esperados */
+.section-resultados {
+    background: linear-gradient(to right, #fffaf0, #ffffff);
+    padding: 80px 20px;
+}
+.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.resultado-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-left: 4px solid #FF6B6B;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.resultado-item i {
+    color: #25D366;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Testemunhos */
+.section-testemunhos {
+    background: #f0f4fa;
+    padding: 80px 20px;
+}
+.testemunho-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.testemunho-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+.testemunho-item::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 4rem;
+    opacity: 0.1;
+    color: #FF6B6B;
+}
+.testemunho-avatar {
+    width: 50px;
+    height: 50px;
+    background: #FF6B6B;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.testemunho-nome {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #2A363B;
+}
+
+/* FAQ */
+.faq-section {
+    background: #ffffff;
+    padding: 80px 20px;
+}
+.faq-item {
+    background: #f8f9fa;
+    margin-bottom: 20px;
+    padding: 20px 25px;
+    border-left: 4px solid #FF6B6B;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.faq-item:hover {
+    background: #fffaf0;
+    transform: translateX(5px);
+}
+.faq-item h3 {
+    color: #2A363B;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Bottom CTA */
+.bottom-cta {
+    background: linear-gradient(135deg, #FF6B6B 0%, #ff8e53 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.bottom-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+.bottom-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.9);
+}
+.btn-large {
+    font-size: 1.2rem;
+    padding: 18px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* ====== ATUALIZAÇÕES EXISTENTES ====== */
+
+/* Header Principal */
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+.header-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+.btn-primary {
+    background: #FF6B6B;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background: #ff8e53;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255,107,107,0.3);
+}
+
+/* Cards Atualizados */
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+.card li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.card li::before {
+    content: '✔️';
+    color: #25D366;
+}
+
+/* Promo Box Atualizada */
+.price-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.price {
+    font-size: 3.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+}
+.price::after {
+    content: "↓ 76% OFF!";
+    position: absolute;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.4em;
+    color: #ff4444;
+    background: rgba(255,255,255,0.9);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.del {
+    font-size: 1.5rem;
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* Rodapé Atualizado */
+.footer-contato i, 
+.footer-links a:hover {
+    color: #FF6B6B !important;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    .facilitador-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .facilitador-img-wrapper {
+        margin-bottom: 20px;
+      
+    }
+    .price-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .price::after {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-large {
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
 }
